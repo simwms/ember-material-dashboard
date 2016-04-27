@@ -1,0 +1,7 @@
+{{#if (eq iconType "img")}}
+  <img src="{{iconName}}" class="matdash-icon__img">
+{{else if (eq iconType "awesome")}}
+  <i class="fa {{iconName}}"></i>
+{{else}}
+  <i class="material-icons">{{iconName}}</i>
+{{/if}}

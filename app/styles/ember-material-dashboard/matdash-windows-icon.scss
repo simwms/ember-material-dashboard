@@ -1,0 +1,47 @@
+.matdash-windows-icon__card-core {
+  width: 100%;
+  min-height: 105px;
+  cursor: pointer;
+  &:hover {
+    box-shadow: 0px 7px 8px -4px rgba(0, 0, 0, 0.1), 0px 12px 17px 2px rgba(0, 0, 0, 0.1), 0px 5px 22px 4px rgba(0, 0, 0, 0.1);
+  }
+  &.clicked {
+    background-color: #B3E5FC;
+  }
+}
+
+.matdash-windows-icon__media-background {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1;
+  background: {
+    color: rgba(0,0,0,0);
+    size: contain;
+    position: center center;
+    repeat: no-repeat;
+  }
+  &.folder {
+    background: {
+      image: url("images/folder-orange.png");
+    }
+  }
+  &.file {
+    background: {
+      image: url("images/file-blank.png");
+    } 
+  }
+  .matdash-icon__img {
+    width: 48px;
+    height: 48px;
+  }
+}
+.matdash-windows-icon__title {
+  font-size: 12px;
+  text-align: center;
+  text-overflow: ellipsis;
+}
+.matdash-windows-icon__status-menu {
+  right: 0;
+  top: 0;
+}

@@ -1,0 +1,35 @@
+{{#modal-dialog close='closeModal' translucentOverlay=true}}
+  <div class="row">
+    <div class="col-xs-12">
+      <h3 class="modal-title">Login to Your Account</h3>
+    </div>
+    <div class="col-xs-12">
+      <div class="btn-group btn-group-lg" role="group">
+        {{#link-to "signin" class="btn btn-default"}}
+          Login
+        {{/link-to}}
+        {{#link-to "register" class="btn btn-default"}}
+          Register
+        {{/link-to}}
+      </div>
+    </div>
+    <div class="col-xs-12">
+      {{#em-form-for model action="login" as |f|}}
+        {{em-email-field f label="Employee Email"}}
+        {{em-password-field f label="Password"}}
+        <div class="actions">
+          <button type="submit" class="btn btn-lg btn-primary {{if model.isSaving "disabled"}}">
+            {{#if model.isLoaded}}
+              {{fa-icon "check"}}
+              <span class="fa">Submit</span>
+            {{else}}
+              {{fa-icon "cog" spin=true}}
+              <span class="fa">Busy...</span>
+            {{/if}}
+          </button>
+        </div>
+      {{/em-form-for}}
+    </div>
+  </div>
+{{/modal-dialog}}
+

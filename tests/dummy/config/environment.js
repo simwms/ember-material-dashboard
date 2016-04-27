@@ -6,10 +6,31 @@ module.exports = function(environment) {
     environment: environment,
     baseURL: '/',
     locationType: 'auto',
+    cookieKey: "_apiv4_key",
+    host: "http://localhost:4000",
+    namespace: "api",
+    socketNamespace: "ws://localhost:4000/socket",
     EmberENV: {
       FEATURES: {
         // Here you can enable experimental features on an ember canary build
         // e.g. 'with-controller': true
+      }
+    },
+    "ember-simple-auth": {
+      authenticationRoute: "signin"
+    },
+    stripe: {
+      key: "pk_test_9VNs5lmJpCba3wXgHTbjTcCh",
+      publishableKey: "pk_test_9VNs5lmJpCba3wXgHTbjTcCh"
+    },
+    AutoX: {
+      Components: {
+        // showAttrField: "dummy-attr-field", 
+        // showActionField: "dummy-action-field", 
+        // showLinkField: "dummy-link-field",
+        // indexSummarizeModel: "dummy-summarize-model",
+        showModel: "dummy-model",
+        indexCollection: "dummy-collection"
       }
     },
 

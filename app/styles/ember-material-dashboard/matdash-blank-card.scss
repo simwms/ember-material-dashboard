@@ -1,0 +1,11 @@
+.matdash-blank-card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1;
+  min-height: 70vh;
+}
+.matdash-blank-card__image {
+  flex-grow: 1;
+  width: 100%;
+}

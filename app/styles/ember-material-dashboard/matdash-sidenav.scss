@@ -1,0 +1,53 @@
+.matdash-sidenav {
+  width: 240px;
+  .matdash-sidenav__navigation {
+    .mdl-navigation__link { 
+      color: rgba(255, 255, 255, 0.56);
+      font-weight: 500;
+      &:hover {
+        background-color: #00BCD4;
+        color: #37474F;
+      }
+    }
+  }
+}
+
+.matdash-sidenav__avatar-dropdown {
+  display: flex;
+  position: relative;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+}
+
+.matdash-sidenav__header {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 16px;
+  height: 151px;
+}
+
+.matdash-sidenav__navigation-ctn {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  padding-top: 16px;
+  flex-grow: 1;
+}
+
+.matdash-sidenav__navigation {
+  flex-grow: 1; 
+  .mdl-navigation__link {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    &.active {
+      background-color: #2E7D32;
+    }
+  }
+  .material-icons {
+    font-size: 24px;
+  }
+}

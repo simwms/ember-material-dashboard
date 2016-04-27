@@ -1,0 +1,413 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"icon",
+				"iconName"
+			],
+			[
+				"color",
+				"colorClass"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "tests/dummy/app/routes/dashboard.coffee",
+			"settings":
+			{
+				"buffer_size": 412,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "tests/dummy/app/routes/dashboard/warehouse.coffee",
+			"settings":
+			{
+				"buffer_size": 1300,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "tests/dummy/app/routes/application.js",
+			"settings":
+			{
+				"buffer_size": 356,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 96.0,
+		"last_filter": "Package Control: instal",
+		"selected_items":
+		[
+			[
+				"Package Control: instal",
+				"Package Control: Install Package"
+			],
+			[
+				"",
+				"Coffee: Compile File"
+			],
+			[
+				"Package Control: dis",
+				"Package Control: Disable Package"
+			],
+			[
+				"Package Control: ena",
+				"Package Control: Enable Package"
+			],
+			[
+				"Package Control: enable",
+				"Package Control: Enable Package"
+			]
+		],
+		"width": 449.0
+	},
+	"console":
+	{
+		"height": 139.0,
+		"history":
+		[
+			"import urllib.request,os,hashlib; h = '2915d1851351e5ee549c20394736b442' + '8bc59f460fa1548d1514676163dafc88'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/home/ia/pisources/simwms/ember-material-dashboard",
+		"/home/ia/pisources/simwms/ember-material-dashboard/addon",
+		"/home/ia/pisources/simwms/ember-material-dashboard/addon/components",
+		"/home/ia/pisources/simwms/ember-material-dashboard/addon/components/ma-icon",
+		"/home/ia/pisources/simwms/ember-material-dashboard/addon/components/matdash-content",
+		"/home/ia/pisources/simwms/ember-material-dashboard/addon/components/matdash-layout",
+		"/home/ia/pisources/simwms/ember-material-dashboard/addon/components/matdash-minicard",
+		"/home/ia/pisources/simwms/ember-material-dashboard/addon/components/matdash-sidenav",
+		"/home/ia/pisources/simwms/ember-material-dashboard/addon/components/matdash-sidenav-link",
+		"/home/ia/pisources/simwms/ember-material-dashboard/addon/components/matdash-window-modal",
+		"/home/ia/pisources/simwms/ember-material-dashboard/addon/components/matdash-windows-desktop",
+		"/home/ia/pisources/simwms/ember-material-dashboard/tests",
+		"/home/ia/pisources/simwms/ember-material-dashboard/tests/dummy",
+		"/home/ia/pisources/simwms/ember-material-dashboard/tests/dummy/app",
+		"/home/ia/pisources/simwms/ember-material-dashboard/tests/dummy/app/initializers",
+		"/home/ia/pisources/simwms/ember-material-dashboard/tests/dummy/app/mixins",
+		"/home/ia/pisources/simwms/ember-material-dashboard/tests/dummy/app/routes",
+		"/home/ia/pisources/simwms/ember-material-dashboard/tests/dummy/app/routes/dashboard",
+		"/home/ia/pisources/simwms/ember-material-dashboard/tests/dummy/app/services",
+		"/home/ia/pisources/simwms/ember-material-dashboard/tests/dummy/app/styles",
+		"/home/ia/pisources/simwms/ember-material-dashboard/tests/dummy/app/templates",
+		"/home/ia/pisources/simwms/ember-material-dashboard/tests/dummy/app/templates/dashboard",
+		"/home/ia/pisources/simwms/ember-material-dashboard/tests/dummy/app/templates/dashboard/warehouse"
+	],
+	"file_history":
+	[
+		"/home/ia/pisources/simwms/ember-material-dashboard/tests/dummy/app/services/active-service-plan.coffee",
+		"/home/ia/pisources/simwms/ember-material-dashboard/tests/dummy/app/initializers/active-service-plan.coffee",
+		"/home/ia/pisources/simwms/ember-material-dashboard/tests/dummy/app/router.coffee",
+		"/home/ia/pisources/simwms/ember-material-dashboard/tests/dummy/app/mixins/application-route.coffee",
+		"/home/ia/pisources/simwms/ember-material-dashboard/tests/dummy/app/routes/application.js",
+		"/home/ia/pisources/simwms/ember-material-dashboard/tests/dummy/app/templates/dashboard/warehouse/appointments.hbs",
+		"/home/ia/pisources/simwms/ember-material-dashboard/tests/dummy/app/templates/dashboard/warehouse/index.hbs",
+		"/home/ia/pisources/simwms/ember-material-dashboard/tests/dummy/app/routes/register.coffee",
+		"/home/ia/pisources/simwms/ember-material-dashboard/tests/dummy/app/routes/signin.coffee",
+		"/home/ia/pisources/simwms/ember-material-dashboard/tests/dummy/app/templates/windows/warehouse/appointments.hbs",
+		"/home/ia/pisources/simwms/ember-material-dashboard/addon/components/matdash-windows-desktop/component.coffee",
+		"/home/ia/pisources/simwms/ember-material-dashboard/addon/components/matdash-window-modal/template.hbs",
+		"/home/ia/pisources/simwms/ember-material-dashboard/app/styles/ember-material-dashboard/matdash-window-modal.scss",
+		"/home/ia/pisources/simwms/ember-material-dashboard/addon/components/matdash-windows-desktop/template.hbs",
+		"/home/ia/pisources/simwms/ember-material-dashboard/addon/components/matdash-window-modal/component.coffee",
+		"/home/ia/pisources/simwms/ember-material-dashboard/tests/dummy/app/controllers/dashboard/warehouse.coffee",
+		"/home/ia/pisources/simwms/ember-material-dashboard/tests/dummy/app/templates/dashboard/warehouse.hbs",
+		"/home/ia/pisources/simwms/ember-material-dashboard/tests/dummy/app/routes/dashboard/warehouse.coffee",
+		"/home/ia/pisources/simwms/ember-material-dashboard/app/styles/ember-material-dashboard.scss",
+		"/home/ia/pisources/simwms/ember-material-dashboard/addon/components/matdash-minicard/template.hbs",
+		"/home/ia/pisources/simwms/ember-material-dashboard/addon/components/matdash-minicard/component.coffee",
+		"/home/ia/pisources/simwms/ember-material-dashboard/app/styles/ember-material-dashboard/matdash-minicard.scss",
+		"/home/ia/pisources/simwms/ember-material-dashboard/addon/components/ma-icon/component.coffee",
+		"/home/ia/pisources/simwms/ember-material-dashboard/addon/components/matdash-sidenav-link/template.hbs",
+		"/home/ia/pisources/simwms/ember-material-dashboard/app/styles/ember-material-dashboard/ma-icon.scss",
+		"/home/ia/pisources/simwms/ember-material-dashboard/addon/components/matdash-sidenav/template.hbs",
+		"/home/ia/pisources/simwms/ember-material-dashboard/tests/dummy/app/routes/index.coffee",
+		"/home/ia/pisources/simwms/ember-material-dashboard/tests/dummy/app/templates/dashboard.hbs",
+		"/home/ia/pisources/simwms/ember-material-dashboard/app/styles/ember-material-dashboard/matdash-sidenav.scss",
+		"/home/ia/pisources/simwms/ember-material-dashboard/addon/components/matdash-layout/template.hbs",
+		"/home/ia/pisources/simwms/ember-material-dashboard/addon/components/ma-icon/template.hbs",
+		"/home/ia/pisources/simwms/ember-material-dashboard/addon/components/matdash-sidenav/component.coffee",
+		"/home/ia/pisources/simwms/ember-material-dashboard/addon/components/matdash-sidenav-link/component.coffee",
+		"/home/ia/pisources/simwms/ember-material-dashboard/package.json",
+		"/home/ia/pisources/simwms/ember-material-dashboard/.sublime-project",
+		"/home/ia/pisources/simwms/ember-material-dashboard/src/addon/components/matdash-sidenav/component.coffee",
+		"/home/ia/pisources/simwms/ember-material-dashboard/src/addon/components/ma-icon/component.coffee",
+		"/home/ia/pisources/simwms/ember-material-dashboard/src/addon/components/matdash-sidenav-link/component.coffee",
+		"/home/ia/pisources/simwms/ember-material-dashboard/src/addon/initializers/matdash-environment.coffee",
+		"/home/ia/pisources/simwms/ember-material-dashboard/src/addon/components/matdash-minicard/component.coffee",
+		"/home/ia/pisources/simwms/ember-material-dashboard/src/addon/components/matdash-sidenav/template.hbs",
+		"/home/ia/pisources/simwms/ember-material-dashboard/src/addon/components/matdash-sidenav-link/template.hbs",
+		"/home/ia/pisources/simwms/ember-material-dashboard/src/app/initializers/matdash-environment.coffee",
+		"/home/ia/pisources/simwms/ember-material-dashboard/src/tests/dummy/app/router.coffee",
+		"/home/ia/pisources/simwms/ember-material-dashboard/src/addon/services/matdash-environment.coffee",
+		"/home/ia/pisources/simwms/ember-material-dashboard/addon/initializers/matdash-environment.coffee",
+		"/home/ia/pisources/simwms/ember-material-dashboard/src/app/services/matdash-environment.coffee",
+		"/home/ia/pisources/simwms/ember-material-dashboard/addon-src/components/matdash-sidenav/component.coffee",
+		"/home/ia/.config/sublime-text-3/Packages/User/CoffeeScript.sublime-settings",
+		"/home/ia/.config/sublime-text-3/Packages/Better CoffeeScript/CoffeeScript.sublime-settings",
+		"/home/ia/.config/sublime-text-3/Packages/User/Preferences.sublime-settings",
+		"/home/ia/pisources/simwms/xx/fasdf",
+		"/home/ia/.config/sublime-text-3/Packages/Default/Preferences.sublime-settings",
+		"/home/ia/pisources/simwms/ember-material-dashboard/addon/components/matdash-topnav/component.coffee",
+		"/home/ia/.config/sublime-text-3/Packages/Better CoffeeScript/Keymaps/Default (Linux).sublime-keymap"
+	],
+	"find":
+	{
+		"height": 25.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"UserRoute",
+			"user",
+			"User",
+			"-100",
+			"-200",
+			"dark-",
+			"h2",
+			" ",
+			"text=",
+			"text",
+			"register",
+			"div",
+			"\"images/doge.png\"",
+			"{{#link-to",
+			"img=",
+			"text="
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 2,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "tests/dummy/app/routes/dashboard.coffee",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 412,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								379,
+								379
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Better CoffeeScript/CoffeeScript.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "tests/dummy/app/routes/dashboard/warehouse.coffee",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1300,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								309,
+								309
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Better CoffeeScript/CoffeeScript.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "tests/dummy/app/routes/application.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 356,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								166,
+								166
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScriptNext - ES6 Syntax/JavaScriptNext.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 25.0
+	},
+	"input":
+	{
+		"height": 33.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"output.livescript_output":
+	{
+		"height": 112.0
+	},
+	"pinned_build_system": "",
+	"project": ".sublime-project",
+	"replace":
+	{
+		"height": 46.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"sidenav/com",
+				"src/addon/components/matdash-sidenav/component.coffee"
+			],
+			[
+				"template",
+				"ember-material-dashboard/addon/components/matdash-sidenav/template.hbs"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 227.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

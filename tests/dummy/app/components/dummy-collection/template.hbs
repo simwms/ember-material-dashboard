@@ -1,0 +1,36 @@
+{{#matdash-window-modal close=(action transitionTo "dashboard.warehouse.index") cardTitle=routing.currentPath as |window|}}
+  {{#window.tabs}}
+    {{#ma-anything tagName="button" class=window.tabClass tooltipContent=(if showHelpView "Close Help" "Help") click=(action (toggle "showHelpView" this))}}
+      {{ma-icon "info_outline"}}
+    {{/ma-anything}}
+    {{yield (hash
+      before-grid=(component "block-for" "before-grid")
+      after-grid=(component "block-for" "after-grid")
+      tabClass=window.tabClass
+    )}}
+  {{/window.tabs}}
+
+  {{named-yield "before-grid"}}
+  {{#if collection}}
+    {{#storefront-grid-cards as |grid|}}
+      {{#each collection as |model|}}
+        {{#matdash-windows-icon windows=window
+          assetSrc=(concat "images/" model.constructor.modelName ".png")
+          dblClick=(if modelPath (action transitionTo modelPath model))}}
+          {{#tooltip-on-parent place="bottom"}}
+            {{aboutField.label}} - {{txt (get model aboutField.accessName) type=aboutField.type formatter=aboutField.presenter}}
+            {{#each displayableFields as |field|}}
+              <span class="dummy-collection__tooltip-extras">
+                | {{field.label}} - {{txt (get model field.accessName) type=field.type formatter=field.presenter}}
+              </span>
+            {{/each}}
+          {{/tooltip-on-parent}}
+          {{txt (get model aboutField.accessName) type=aboutField.type formatter=aboutField.presenter}}
+        {{/matdash-windows-icon}}
+      {{/each}}
+    {{/storefront-grid-cards}}
+  {{else}}
+    {{matdash-blank-card}}
+  {{/if}}
+  {{named-yield "after-grid"}}
+{{/matdash-window-modal}}

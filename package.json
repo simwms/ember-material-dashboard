@@ -18,16 +18,18 @@
   "author": "",
   "license": "MIT",
   "devDependencies": {
+    "apiv4": "file:///home/ia/pisources/simwms/apiv4",
+    "autox": "file:///home/ia/pisources/simwms/autox",
     "broccoli-asset-rev": "^2.4.2",
     "ember-ajax": "0.7.1",
+    "ember-async-button": "1.0.0",
     "ember-cli": "2.4.3",
     "ember-cli-app-version": "^1.0.0",
     "ember-cli-autoprefixer": "0.6.0",
     "ember-cli-bootstrap-sassy": "0.5.3",
-    "ember-cli-coffeescript": "1.13.2",
     "ember-cli-dependency-checker": "^1.2.0",
+    "ember-cli-favicon": "1.0.0-beta.2",
     "ember-cli-format-number": "1.0.2",
-    "ember-cli-htmlbars": "^1.0.3",
     "ember-cli-htmlbars-inline-precompile": "^0.3.1",
     "ember-cli-inject-live-reload": "^1.4.0",
     "ember-cli-moment-shim": "1.1.0",
@@ -38,9 +40,9 @@
     "ember-cli-sri": "^2.1.0",
     "ember-cli-stripe": "0.4.0",
     "ember-cli-uglify": "^1.2.0",
-    "ember-component-css": "0.1.9",
     "ember-composable-helpers": "0.21.1",
     "ember-concurrency": "0.6.0",
+    "ember-config-service": "0.1.2",
     "ember-cpm": "2.1.2",
     "ember-data": "^2.4.2",
     "ember-disable-prototype-extensions": "^1.1.0",
@@ -56,18 +58,24 @@
     "ember-phoenix-chan": "0.1.10",
     "ember-power-select": "0.10.0-beta.11",
     "ember-pricing-table": "0.2.1",
+    "ember-query-params": "2.0.3",
     "ember-resolver": "^2.0.3",
     "ember-simple-auth": "1.1.0-beta.4",
     "ember-timezone-input": "0.1.4",
+    "ember-tooltips": "0.5.9",
     "ember-truth-helpers": "1.2.0",
     "ember-try": "^0.2.2",
-    "loader.js": "^4.0.1"
+    "loader.js": "^4.0.1",
+    "storefront": "git+ssh://git@gitlab.com/foxnewsnetwork/storefront.git#v0.1.4"
   },
   "keywords": [
     "ember-addon"
   ],
   "dependencies": {
-    "ember-cli-babel": "^5.1.6"
+    "ember-cli-babel": "^5.1.6",
+    "ember-cli-htmlbars": "^1.0.3",
+    "inflection": "^1.9.0",
+    "ember-cli-coffeescript": "1.13.2"
   },
   "ember-addon": {
     "configPath": "tests/dummy/config"

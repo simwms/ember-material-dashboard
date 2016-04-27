@@ -1,4 +1,4 @@
-@import "bootstrap";
+@import "bootstrap-custom";
 @import 'material-design-lite';
 @import "ember-modal-dialog/ember-modal-structure";
 @import "ember-modal-dialog/ember-modal-appearance";
@@ -7,3 +7,11 @@
 @import "font-awesome";
 @import 'ember-power-select/themes/bootstrap';
 @import "ember-power-select";
+
+html, body {
+  font-family: 'Roboto', 'Helvetica', sans-serif;
+}
+
+.mdl-card {
+  width: 100%;
+}

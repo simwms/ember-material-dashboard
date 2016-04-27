@@ -1,0 +1,16 @@
+<div class="mdl-card mdl-shadow--2dp matdash-minicard__card-core {{if isClicked "clicked"}}" 
+  {{action dblClick on="doubleClick"}} 
+  {{action (toggle "isClicked" this)}}>
+  <div class="mdl-card__media matdash-minicard__media-background {{cardBackType}}">
+    {{ma-icon src class="matdash-minicard__img"}}
+  </div>
+  <div class="mdl-card__actions mdl-card--border matdash-minicard__actions">
+    <div class="matdash-minicard__title mdl-color--dark-grey-600">
+      {{#if hasBlock}}
+        {{yield}}
+      {{else}}
+        {{cardTitle}}
+      {{/if}}
+    </div>
+  </div>
+</div>

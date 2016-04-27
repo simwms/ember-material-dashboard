@@ -1,0 +1,52 @@
+{{#portal-content for="sidenav"}}
+  {{matdash-sidenav-link "Back to Dashboard" "dashboard.index"}}  
+  {{matdash-sidenav-link "Employees" "dashboard.warehouse.employees" icon="assets/images/employees.png" }}  
+  {{matdash-sidenav-link "Appointments" "dashboard.warehouse.appointments" icon="assets/images/appointment.png" }}  
+  {{matdash-sidenav-link "Stored Materials" "dashboard.warehouse.batches" icon="assets/images/inventory.png" }}  
+  {{matdash-sidenav-link "Docks" "dashboard.warehouse.docks" icon="assets/images/forklift.png" }}  
+  {{matdash-sidenav-link "Trucks" "dashboard.warehouse.trucks" icon="assets/images/truck.png" }}  
+  {{matdash-sidenav-link "Scales" "dashboard.warehouse.scales" icon="assets/images/scale.png" }}  
+  {{matdash-sidenav-link "Admin" "dashboard.warehouse.admin" icon="perm_data_setting" }}  
+{{/portal-content}}
+
+{{#matdash-windows-desktop as |windows|}}
+  {{#matdash-windows-icon windows=windows
+    status="warning"
+    assetSrc="images/employees.png"
+    dblClick=(action transitionToRoute "dashboard.warehouse.employees")}}
+    {{#tooltip-on-parent place="bottom"}}Warehouse Employees{{/tooltip-on-parent}}
+    Employees
+  {{/matdash-windows-icon}}
+  {{#matdash-windows-icon windows=windows
+    status="announcement"
+    assetSrc="images/appointment.png"
+    dblClick=(action transitionToRoute "dashboard.warehouse.appointments")}}
+    {{#tooltip-on-parent place="bottom"}}Appointments{{/tooltip-on-parent}}
+    Appointments
+  {{/matdash-windows-icon}}
+  {{#matdash-windows-icon windows=windows
+    assetSrc="images/inventory.png"
+    dblClick=(action transitionToRoute "dashboard.warehouse.batches")}}
+    {{#tooltip-on-parent place="bottom"}}Warehouse storage and inventory{{/tooltip-on-parent}}
+    Inventory
+  {{/matdash-windows-icon}}
+  {{#matdash-windows-icon windows=windows
+    assetSrc="images/forklift.png"
+    dblClick=(action transitionToRoute "dashboard.warehouse.docks")}}
+    {{#tooltip-on-parent place="bottom"}}Warehouse loading docks{{/tooltip-on-parent}}
+    Docks
+  {{/matdash-windows-icon}}
+  {{#matdash-windows-icon windows=windows
+    assetSrc="images/truck.png"
+    dblClick=(action transitionToRoute "dashboard.warehouse.trucks")}}
+    {{#tooltip-on-parent place="bottom"}}Onsite trucks{{/tooltip-on-parent}}
+    Trucks
+  {{/matdash-windows-icon}}
+  {{#matdash-windows-icon windows=windows
+    assetSrc="images/scale.png"
+    dblClick=(action transitionToRoute "dashboard.warehouse.scales")}}
+    {{#tooltip-on-parent place="bottom"}}Weight Stations{{/tooltip-on-parent}}
+    Scales
+  {{/matdash-windows-icon}}
+  {{outlet}}
+{{/matdash-windows-desktop}}

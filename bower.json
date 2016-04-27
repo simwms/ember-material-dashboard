@@ -9,6 +9,7 @@
     "numeral": "^1.5.3",
     "pace": "^1.0.2",
     "font-awesome": "~4.5.0",
-    "phoenix": "phoenixframework/phoenix#v1.1.4"
+    "phoenix": "phoenixframework/phoenix#v1.1.4",
+    "material-design-lite": "^1.1.3"
   }
 }

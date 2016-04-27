@@ -1,0 +1,21 @@
+<div class="mdl-card mdl-shadow--2dp matdash-windows-icon__card-core {{if isClicked "clicked"}}" 
+  {{action dblClick on="doubleClick"}} 
+  {{action (toggle "isClicked" this)}}>
+  {{#if status}}
+    <div class="mdl-card__menu matdash-windows-icon__status-menu">
+      {{ma-icon status class="matdash-windows-icon__status-icon" color="red-500"}}
+    </div>
+  {{/if}}
+  <div class="mdl-card__media matdash-windows-icon__media-background {{cardBackType}}">
+    {{ma-icon (concat "assets/" assetSrc) class="matdash-windows-icon__img"}}
+  </div>
+  <div class="mdl-card__actions mdl-card--border matdash-windows-icon__actions">
+    <div class="matdash-windows-icon__title mdl-color--dark-grey-600">
+      {{#if hasBlock}}
+        {{yield}}
+      {{else}}
+        {{cardTitle}}
+      {{/if}}
+    </div>
+  </div>
+</div>

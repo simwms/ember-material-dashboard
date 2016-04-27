@@ -1,0 +1,22 @@
+<header class="matdash-sidenav__header">
+  <img src="assets/images/user.jpg" class="matdash-topnav__avatar-img">
+  <div class="matdash-sidenav__avatar-dropdown">
+    <span>{{username}}</span>
+    <div class="mdl-layout-spacer"></div>
+    <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+      <i class="material-icons" role="presentation">arrow_drop_down</i>
+      <span class="visuallyhidden">Accounts</span>
+    </button>
+  </div>
+</header>
+
+{{portal-for name="sidenav" 
+  class="matdash-sidenav__navigation-ctn mdl-navigation"
+  portal-class="matdash-sidenav__navigation mdl-color--blue-grey-800"}}
+{{#portal-content for="sidenav"}}
+  {{#each navLinks as |link|}}
+    {{#link-to link.path class=linkClass}}
+      {{ma-icon link.icon color=iconColor}} {{link.text}}
+    {{/link-to}}
+  {{/each}}
+{{/portal-content}}

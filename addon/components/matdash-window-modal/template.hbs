@@ -1,0 +1,57 @@
+<div class="matdash-window-modal__card mdl-card mdl-shadow--8dp">
+  {{#unless noTitle}}
+    <div class="mdl-card__title matdash-window-modal__title {{if (eq cardMode "drag") "drag-mode"}}"
+      {{action exitDragMode on="mouseLeave"}}
+      {{action enterDragMode on="mouseDown"}}
+      {{action exitDragMode on="mouseUp"}}>
+      {{#if (eq cardMode "resize")}}
+        {{cardMode}} - {{cardWidth}} x {{cardHeight}} - {{resizeDirection}}
+      {{else if (eq cardMode "drag")}}
+        {{cardMode}} - ({{cardLeft}}, {{cardTop}})
+      {{else}}
+        {{cardTitle}}
+      {{/if}}
+    </div>
+  {{/unless}}
+  <div class="mdl-card__menu matdash-window-modal__menu">
+    {{#if isMaximized}}
+      <button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect" {{action "minimize"}}>
+        {{fa-icon "clone"}}
+      </button>
+    {{else}}
+      <button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect" {{action "maximize"}}>
+        {{fa-icon "tv"}}
+      </button>
+    {{/if}}
+    <button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect" {{action "close"}}>
+      {{ma-icon "close"}}
+    </button>
+  </div>
+  {{#unless noTabs}}
+    {{named-yield "tabs"
+      class="mdl-card__actions matdash-window-modal__tabs mdl-color--blue-grey-50" 
+      portal-class="matdash-window-modal__tabs-portal"}}
+  {{/unless}}
+  <div class="matdash-window-modal__content">
+    {{yield (hash 
+      tabs=(component "block-for" "tabs")
+      actions=(component "block-for" "actions")
+      tabClass=tabClass
+      actionClass="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect"
+      register=(action registerIcon)
+      unregister=(action unregisterIcon)
+    )}}
+  </div>
+  {{named-yield "actions"
+    class="mdl-card__actions mdl-card--border matdash-window-modal__actions mdl-color--blue-grey-50"
+    portal-class="matdash-windows-modal__actions-portal"}}
+</div>
+<div class="matdash-window-modal__resize-east {{concat cardMode "-" resizeDirection}}" 
+  {{action (action enterResizeMode "east") on="mouseDown"}}>
+</div>
+<div class="matdash-window-modal__resize-south {{concat cardMode "-" resizeDirection}}" 
+  {{action (action enterResizeMode "south") on="mouseDown"}}>
+</div>
+<div class="matdash-window-modal__resize-southeast {{concat cardMode "-" resizeDirection}}"
+  {{action (action enterResizeMode "southeast") on="mouseDown"}}>
+</div>

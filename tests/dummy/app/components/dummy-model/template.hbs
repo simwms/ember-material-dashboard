@@ -1,0 +1,85 @@
+{{#matdash-window-modal close=(action transitionTo "dashboard.warehouse.index") cardTitle=routing.currentPath as |window|}}
+  {{#window.tabs}}
+    {{#ma-anything tagName="button" class=window.tabClass tooltipContent=(if showHelpView "Close Help" "Help") click=(action (toggle "showHelpView" this))}}
+      {{ma-icon "info_outline"}}
+    {{/ma-anything}}
+    {{#each actionFields as |field|}}
+      {{dummy-show-action-field class=window.tabClass field=field model=model invoke=invoke}}      
+    {{/each}}
+  {{/window.tabs}}
+
+  {{named-yield "before-grid"}}
+
+  {{#storefront-grid-cards cardsPerRow=cardsPerRow as |grid|}}
+    {{#each linkFields as |field|}}
+      {{#matdash-windows-icon windows=window
+        assetSrc=(concat "images/" (or field.icon field.name) ".png")
+        dblClick=(action maybeGotoModel field)
+        tooltipContent=field.description}}
+        {{field.label}}
+        {{#if field.isRelationship}}
+          {{get model (concat field.name "." field.proxyKey)}}
+        {{else}}
+          {{txt (get model field.accessName) type=field.type formatter=field.presenter}}
+        {{/if}}
+      {{/matdash-windows-icon}}
+    {{/each}}
+
+    {{#if showCardDetails}}
+      {{#storefront-textbase-card class=grid.cardClass as |card|}}
+        {{#card.title}}
+          {{txt (get model aboutField.accessName) type=aboutField.type formatter=aboutField.presenter}}
+        {{/card.title}}
+        {{#card.subtitle}}
+          {{aboutField.label}}
+        {{/card.subtitle}}
+        {{#each infoFields as |field|}}
+          {{#if field.isCustomized}}
+            {{component field.presenter field=field model=model invoke=invoke}}
+          {{else}}
+            {{#ma-anything tagName="li" class=(concat card.listClass " mdl-list__item--two-line")}}
+              {{#if field.description}}
+                {{#tooltip-on-parent}}
+                  {{field.description}}
+                {{/tooltip-on-parent}}
+              {{/if}}
+              <span class="mdl-list__item-primary-content">
+                {{#if field.icon}}
+                  {{ma-icon field.icon class="mdl-list__item-avatar"}}
+                {{/if}}
+                <span>{{txt (get model field.accessName) type=field.type formatter=field.presenter}}</span>
+                <span class="mdl-list__item-sub-title">{{field.label}}</span>
+              </span>
+            {{/ma-anything}}
+          {{/if}}
+        {{/each}}
+        <div class="mdl-card__menu">
+          {{#ma-anything tagName="button" 
+            class=card.ctaClass 
+            click=(action (toggle "showCardDetails" this))
+            tooltipContent="Hide details"}}
+            {{fa-icon "eye-slash" fixedWidth=true}}
+          {{/ma-anything}}
+        </div>
+      {{/storefront-textbase-card}}
+    {{else}}
+      {{#matdash-windows-icon windows=window
+        cardBackType="file"
+        assetSrc=(concat "images/" (or aboutField.icon aboutField.name) ".png")
+        dblClick=(action (toggle "showCardDetails" this))
+        tooltipContent="double click to show details"}}
+        {{aboutField.label}}
+        {{txt (get model aboutField.accessName) type=aboutField.type formatter=aboutField.presenter}}
+      {{/matdash-windows-icon}}
+    {{/if}}
+  {{/storefront-grid-cards}}
+  {{named-yield "after-grid"}}
+
+  {{#window.actions}}
+    {{yield (hash
+      before-grid=(component "block-for" "before-grid")
+      after-grid=(component "block-for" "after-grid")
+      actionClass=window.actionClass
+    )}}
+  {{/window.actions}}
+{{/matdash-window-modal}}

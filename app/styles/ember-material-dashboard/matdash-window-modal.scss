@@ -1,0 +1,89 @@
+.matdash-window-modal {
+  position: absolute;
+  @media (min-width: $grid-desktop-breakpoint) {
+    min-width: 300px;
+  }
+}
+.matdash-window-modal__card {
+  height: 100%;
+  width: 100%;
+}
+.matdash-window-modal__tabs {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  padding: 0 0;
+}
+.matdash-window-modal__tabs-portal {
+  padding: 4px 8px;
+}
+.matdash-window-modal__actions {
+  padding: 0 0;
+}
+.matdash-window-modal__content {
+  overflow-x: hidden;
+  overflow-y: auto;
+  padding: 16px;
+  flex-grow: 1;
+}
+.matdash-window-modal__title {
+  padding: 24px 16px;
+  height: 28px;
+  background: linear-gradient(35deg, #4FC3F7, #546E7A);
+  background: {
+    color: #78909C;
+  }
+  cursor: grab;
+  &.drag-mode {
+    cursor: grabbing;
+  }
+}
+.matdash-window-modal__menu {
+  top: 8px;
+  right: 8px;
+}
+.matdash-window-modal__resize-east {
+  position: absolute;
+  right: -5px;
+  top: 0;
+  bottom: 0;
+  width: 10px;
+  cursor: e-resize;
+  z-index: 1;
+  &.resize-east {
+    border: 2px dotted #1A237E;
+    z-index: 6666;
+    width: 50px;
+    right: -35px;
+  }
+}
+.matdash-window-modal__resize-south {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -5px;
+  height: 10px;
+  cursor: s-resize;
+  z-index: 1;
+  &.resize-south {
+    border: 2px dotted #1A237E;
+    z-index: 6666;
+    height: 50px;
+    bottom: -35px;
+  }
+}
+.matdash-window-modal__resize-southeast {
+  position: absolute;
+  right: -5px;
+  bottom: -5px;
+  height: 15px;
+  width: 15px;
+  cursor: se-resize;
+  z-index: 1;
+  &.resize-southeast {
+    border: 2px dotted #1A237E;
+    z-index: 6666;
+    width: 50px;
+    height: 50px;
+    right: -35px;
+    bottom: -35px;
+  }
+}
