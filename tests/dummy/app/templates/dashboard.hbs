@@ -1,6 +1,9 @@
-{{#matdash-layout username=xession.model.email navLinks=(append
-  (hash path="dashboard.accounts.new" text="New Warehouse" icon="add_circle")
-  (hash path="dashboard.employees" text="My Warehouses" icon="bookmark")
-  (hash path="dashboard.employers" text="Their Warehouses" icon="group"))}}
-  {{outlet}}
+{{#matdash-layout username=xession.model.email 
+  menuLinks=(append
+    (hash path="dashboard.index" text="Warehouse Accounts"))
+  navLinks=(append
+    (hash path="dashboard.accounts.new" text="New Warehouse" icon="add_circle")
+    (hash path="dashboard.employees" text="My Warehouses" icon="bookmark")
+    (hash path="dashboard.employers" text="Their Warehouses" icon="group"))}}
+    {{outlet}}
 {{/matdash-layout}}

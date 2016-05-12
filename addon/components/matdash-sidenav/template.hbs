@@ -3,10 +3,16 @@
   <div class="matdash-sidenav__avatar-dropdown">
     <span>{{username}}</span>
     <div class="mdl-layout-spacer"></div>
-    <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
-      <i class="material-icons" role="presentation">arrow_drop_down</i>
-      <span class="visuallyhidden">Accounts</span>
-    </button>
+    
+    {{#mdl-menu align="bottom-right" icon="arrow_drop_down"}}
+      {{#each menuLinks as |link|}}
+        {{#link-to link.path class="mdl-menu__item" tagName="li"}}
+          {{#link-to link.path}}
+            {{link.text}} 
+          {{/link-to}}
+        {{/link-to}}
+      {{/each}}
+    {{/mdl-menu}}
   </div>
 </header>
 
