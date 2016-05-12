@@ -1,13 +1,17 @@
 `import Ember from 'ember'`
 `import layout from './template'`
 {computed} = Ember
+
 MaIconComponent = Ember.Component.extend
   layout: layout
   tagName: "span" 
   classNames: ["matdash-icon"]
+  classNameBindings: ["badgeClass", "colorClass"]
+  attributeBindings: ["badge:data-badge"]
   ariaRole: "presentation"
-  classNameBindings: ["colorClass"]
 
+  badgeClass: computed "badge", ->
+    if @get("badge") > 0 then "mdl-badge" else ""
   iconType: computed "iconName", ->
     name = @getWithDefault("iconName", "").trim()
     switch

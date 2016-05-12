@@ -11,14 +11,13 @@
 
 {{#matdash-windows-desktop as |windows|}}
   {{#matdash-windows-icon windows=windows
-    status="warning"
     assetSrc="images/employees.png"
     dblClick=(action transitionToRoute "dashboard.warehouse.employees")}}
     {{#tooltip-on-parent place="bottom"}}Warehouse Employees{{/tooltip-on-parent}}
     Employees
   {{/matdash-windows-icon}}
   {{#matdash-windows-icon windows=windows
-    status="announcement"
+    badge=model.appointments.length
     assetSrc="images/appointment.png"
     dblClick=(action transitionToRoute "dashboard.warehouse.appointments")}}
     {{#tooltip-on-parent place="bottom"}}Appointments{{/tooltip-on-parent}}
@@ -37,6 +36,7 @@
     Docks
   {{/matdash-windows-icon}}
   {{#matdash-windows-icon windows=windows
+    badge=model.trucks.length
     assetSrc="images/truck.png"
     dblClick=(action transitionToRoute "dashboard.warehouse.trucks")}}
     {{#tooltip-on-parent place="bottom"}}Onsite trucks{{/tooltip-on-parent}}
@@ -48,5 +48,7 @@
     {{#tooltip-on-parent place="bottom"}}Weight Stations{{/tooltip-on-parent}}
     Scales
   {{/matdash-windows-icon}}
-  {{outlet}}
+  {{#yield-stack payload=windows}}
+    {{outlet}}
+  {{/yield-stack}}
 {{/matdash-windows-desktop}}

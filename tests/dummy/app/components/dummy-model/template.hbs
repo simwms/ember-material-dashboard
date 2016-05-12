@@ -1,6 +1,8 @@
 {{#matdash-window-modal close=(action transitionTo "dashboard.warehouse.index") cardTitle=routing.currentPath as |window|}}
   {{#window.tabs}}
-    {{#ma-anything tagName="button" class=window.tabClass tooltipContent=(if showHelpView "Close Help" "Help") click=(action (toggle "showHelpView" this))}}
+    {{#ma-anything tagName="button" 
+      class=window.tabClass 
+      tooltipContent=(concat model.constructor.modelName " actions")}}
       {{ma-icon "info_outline"}}
     {{/ma-anything}}
     {{#each actionFields as |field|}}

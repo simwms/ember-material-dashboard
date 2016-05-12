@@ -5,7 +5,8 @@
 MatdashWindowsIconComponent = Component.extend
   layout: layout
   classNames: ["matdash-windows-icon"]
-  didInitAttrs: ->
+  init: ->
+    @_super arguments...
     @get "windows"
     ?.register @
 

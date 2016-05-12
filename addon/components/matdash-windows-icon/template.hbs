@@ -1,4 +1,4 @@
-<div class="mdl-card mdl-shadow--2dp matdash-windows-icon__card-core {{if isClicked "clicked"}}" 
+<div class="mdl-card mdl-shadow--2dp matdash-windows-icon__card-core {{if isClicked "clicked"}}  {{if badge "mdl-badge"}}" 
   {{action dblClick on="doubleClick"}} 
   {{action (toggle "isClicked" this)}}>
   {{#if status}}
@@ -7,7 +7,7 @@
     </div>
   {{/if}}
   <div class="mdl-card__media matdash-windows-icon__media-background {{cardBackType}}">
-    {{ma-icon (concat "assets/" assetSrc) class="matdash-windows-icon__img"}}
+    {{ma-icon (concat "assets/" assetSrc) class="matdash-windows-icon__img" badge=badge}}
   </div>
   <div class="mdl-card__actions mdl-card--border matdash-windows-icon__actions">
     <div class="matdash-windows-icon__title mdl-color--dark-grey-600">

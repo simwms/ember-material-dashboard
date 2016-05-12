@@ -1,6 +1,7 @@
 `import Ember from 'ember'`
 `import AutosubscribeMixin from 'ember-query-params/mixins/autosubscribe'`
 `import AuthenticatedRouteMixin from 'ember-simple-auth/mixins/authenticated-route-mixin'`
+`import {processMacro} from 'dummy/utils/process-query'`
 
 {RSVP, inject: {service}} = Ember
 WarehouseRoute = Ember.Route.extend AutosubscribeMixin, AuthenticatedRouteMixin,
@@ -17,12 +18,10 @@ WarehouseRoute = Ember.Route.extend AutosubscribeMixin, AuthenticatedRouteMixin,
     RSVP.hash
       account: @xession.get("model.account")
       scales: @store.findAll "scale"
-      desks: @store.findAll "desk"
       docks: @store.findAll "dock"
-      gates: @store.findAll "gate"
-      cells: @store.findAll "cell"
-      roads: @store.findAll "road"
-      walls: @store.findAll "wall"
+      appointments: @store.query "appointment", processMacro("live")
+      trucks: @store.query "truck", processMacro("live")
+      batches: @store.query "batch", processMacro("live")
 
   afterModel: ({account}) ->
     @_super arguments...
